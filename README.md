@@ -33,6 +33,8 @@ GET /github/octocat/repos
 
 #### Example Response
 
+Note: The repository 'fork' field is not included since only non-fork repositories are returned
+
 ```json
 [
   {
@@ -41,7 +43,6 @@ GET /github/octocat/repos
       "owner": {
         "login": "octocat"
       }
-      // Note: The 'fork' field is not included since only non-fork repositories are returned
     },
     "branches": [
       {
@@ -65,8 +66,7 @@ Example of such error:
 
 ```json
 {
-  status 403
-  message "GitHub API error: rate limit exceeded, status code 403"
+  "status": 403,
+  "message": "GitHub API error: rate limit exceeded, status code 403"
 }
-
 ```
